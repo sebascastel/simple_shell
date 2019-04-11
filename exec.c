@@ -27,8 +27,6 @@ void exec_command(char *argv, char **buff_tk,
 		{
 			perror(argv);
 			free(buff_tk);
-			/*kill(0, SIGSTOP);*/
-			/*free(buff);*/
 		}
 	}
 	else
@@ -36,13 +34,11 @@ void exec_command(char *argv, char **buff_tk,
 		wait(stat);
 		if (check_path == -1)
 		{
-			/*free(buff_tk[0]);*/
 			free(buff_tk1);
 			buff_tk1 = NULL;
 
 		}
 		free(buff_tk);
 		buff_tk = NULL;
-		/*free(buff);*/
 	}
 }
