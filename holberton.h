@@ -112,6 +112,7 @@ void blue(void);
 void reset(void);
 void resetb(void);
 /* beta testing */
+void display_splash_screen(FILE *file_ptr);
 int bart(void);
 int welcome(void);
 /* help collection */

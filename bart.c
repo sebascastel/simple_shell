@@ -1,34 +1,32 @@
 #include "holberton.h"
+#define MAX_LEN 128
+/**
+ * display_splash_screen - function that prints a file
+ * @file_ptr: file to be opened
+ */
+void display_splash_screen(FILE *file_ptr)
+{
+	char read_string[MAX_LEN];
+
+	while (fgets(read_string, sizeof(read_string), file_ptr) != NULL)
+		write(STDOUT_FILENO, read_string, _strlen(read_string));
+}
 /**
  * bart - print bart
  * Return: Always 1
  */
 int bart(void)
 {
-	int txt_file, total, read_status;
-	size_t letters = 5000;
 	char *filename = "bart.txt";
-	char buffer[1024];
+	FILE *fptr = NULL;
 
-	if (filename == NULL)
-		return (0);
-	txt_file = open(filename, O_RDONLY);
-
-	if (txt_file == -1)
-		return (0);
-	total = 0;
-	read_status = 1;
-
-	while (letters > 1024 && read_status != 0)
+	fptr = fopen(filename, "r");
+	if (!fptr)
 	{
-		read_status = read(txt_file, buffer, 1024);
-		write(STDOUT_FILENO, buffer, read_status);
-		total += read_status;
-		letters -= 1024;
+		fprintf(stderr, "error opening %s\n", filename);
+		return (1);
 	}
-	read_status = read(txt_file, buffer, letters);
-	write(STDOUT_FILENO, buffer, read_status);
-	total += read_status;
-	close(txt_file);
-return (1);
+	display_splash_screen(fptr);
+	fclose(fptr);
+return (0);
 }
