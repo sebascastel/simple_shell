@@ -11,7 +11,7 @@ void aux_shell(void)
 	{
 		red();
 		write(STDOUT_FILENO, pl_holder, _strlen(pl_holder));
-		reset();
+		cyan();
 	}
 }
 /**
