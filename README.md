@@ -129,7 +129,7 @@ A short description of every file used in this project.
 | `handler.c` |  handles the `ctrl-c` key to keep looping |
 | `help_options.c` | a collection of helper builtin functions    |
 | `holberton.h` | header file    |
-| `not_builtin.c` | core function of our Shell :joy:    |
+| `not_builtin.c` | core function of our Shell  |
 | `path.c` | searches the correct path of command and concatenates the path with '/' and command   |
 | `perm.c` | checks permisions |
 | `print_env.c` | builtin function of `env` prints the environment|
