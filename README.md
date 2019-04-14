@@ -5,11 +5,21 @@
 Welcome to the `Robert-Martin Simple Shell Project` this shell can be compiled and run from the command line, it includes basic features, as well as some advanced features found in most shell programs.
 
 ## Table of contents
+* [Prototype](#item0)
 * [Quick Start](#item1)
 * [Syntax](#item2)
 * [Example Usage](#item3)
 * [Builtins](#item4)
 * [Files](#item5)
+ 
+<a name="item0"></a>
+### Prototype
+The prototype of our main function is as follows: 
+```c
+int main(int argc __attribute__((unused)), char **argv, char **env);
+```
+           
+The header file is called `holberton.h` where all the function prototypes, structures and libraries used in our shell are referenced.
  
 <a name="item1"></a>
 ### Quick Start
@@ -129,6 +139,7 @@ A short description of every file used in this project.
 | `handler.c` |  handles the `ctrl-c` key to keep looping |
 | `help_options.c` | a collection of helper builtin functions    |
 | `holberton.h` | header file    |
+| `man_1_simple_shell` | Shell's Bells man page     |
 | `not_builtin.c` | core function of our Shell  |
 | `path.c` | searches the correct path of command and concatenates the path with '/' and command   |
 | `perm.c` | checks permisions |
