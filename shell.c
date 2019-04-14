@@ -66,7 +66,7 @@ void aux_aux(int stat, char **buff_tk)
 int main(int argc __attribute__((unused)), char **argv, char **env)
 {	listint_t *env_cp = NULL;
 	char *path = NULL, *buff = NULL, *buff_tk1 = NULL, **buff_tk = NULL;
-	ssize_t leer, in_count = 0, br = 0;
+	ssize_t leer, in_count = 1, br = 0;
 	int check_path = -1, stat = 0;
 
 	get_env(&env_cp, env);
