@@ -40,6 +40,31 @@ void help_alias(void)
 	resetb();
 }
 /**
+ * help_history - aux function of _help
+ * prints msg tp stdout
+*/
+void help_history(void)
+{
+	char *msg = "\n history: history\n\tDefine or display history commands.\n";
+
+	yellow();
+	write(STDOUT_FILENO, msg, _strlen(msg));
+	msg = "\n history fc [-e ename] [-lnr] [first] [last]\n\t";
+	write(STDOUT_FILENO, msg, _strlen(msg));
+	msg = "Many programs read input from the user a line at a time\n\t";
+	write(STDOUT_FILENO, msg, _strlen(msg));
+	msg = "The GNU History library is able to keep track of those lines,\n\t";
+	write(STDOUT_FILENO, msg, _strlen(msg));
+	msg = "associate arbitrary data with each line\n\t";
+	write(STDOUT_FILENO, msg, _strlen(msg));
+	msg = "and utilize info from previous lines in composing new ones.\n\t";
+	write(STDOUT_FILENO, msg, _strlen(msg));
+	msg = "built-in command.\n";
+	write(STDOUT_FILENO, msg, _strlen(msg));
+	resetb();
+}
+
+/**
  * help_all - aux function of _help
  * prints a collection of msgs to stdout
 */
@@ -59,7 +84,7 @@ void help_all(void)
 	write(STDOUT_FILENO, msg, _strlen(msg));
 	msg = "\n setenv \tsetenv [VARIABLE] [VALUE]\n unsetenv\t";
 	write(STDOUT_FILENO, msg, _strlen(msg));
-	msg = "unsetenv [VARIABLE]\n";
+	msg = "unsetenv [VARIABLE]\t history\n";
 	write(STDOUT_FILENO, msg, _strlen(msg));
 	resetb();
 }
@@ -86,6 +111,8 @@ int _help(char **args)
 		help_setenv();
 	else if (_strcmp(args[1], "unsetenv") == 0)
 		help_unsetenv();
+	else if (_strcmp(args[1], "history") == 0)
+		help_history();
 	else if (_strcmp(args[1], "help") == 0)
 		help_help();
 	else

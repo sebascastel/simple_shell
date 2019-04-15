@@ -122,6 +122,7 @@ void help_setenv(void);
 void help_unsetenv(void);
 void help_cd(void);
 void help_exit(void);
+void help_history(void);
 void help_help(void);
 void help_all(void);
 int _help(char **args);
