@@ -10,18 +10,18 @@ void aux_getline(char **p, ssize_t *n, char *buffer, ssize_t b)
 {
 	if (*p == NULL)
 	{
-		if (b > 120)
+		if (b > 1200)
 			*n = b;
 		else
-			*n = 120;
+			*n = 1200;
 		*p = buffer;
 	}
 	else if (*n < b)
 	{
-		if (b > 120)
+		if (b > 1200)
 			*n = b;
 		else
-			*n = 120;
+			*n = 1200;
 		*p = buffer;
 	}
 	else
@@ -49,7 +49,7 @@ ssize_t _getline(char **p, ssize_t *n, FILE *s)
 		fflush(s);
 	else
 		return (-1);
-	buffer = malloc(sizeof(char) * 120);
+	buffer = malloc(sizeof(char) * 1200);
 	if (buffer == NULL)
 		return (-1);
 	for (i = 0; c != '\n'; i++)
@@ -65,7 +65,7 @@ ssize_t _getline(char **p, ssize_t *n, FILE *s)
 			i++;
 			break;
 		}
-		if (i >= 120)
+		if (i >= 1200)
 			buffer = _realloc(buffer, i, i + 1);
 		buffer[i] = c;
 	}
