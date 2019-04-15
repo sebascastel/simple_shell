@@ -73,7 +73,7 @@ int main(int argc __attribute__((unused)), char **argv, char **env)
 	for (; 1; in_count++)
 	{	check_path = -1;
 		aux_shell();
-		leer = _getline(&buff, &br, stdin);
+		leer = getline(&buff, &br, stdin);
 		rd_shell(leer, buff, stat, env_cp);
 		if (buff && buff[0] == '\n')
 			continue;
