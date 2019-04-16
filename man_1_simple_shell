@@ -1,6 +1,7 @@
 Simple Shell man page.
+.TH man 1
 
-.TH "Shell's Bells - Simple Shell Project" 1 "14 April 2019" "1.0" "Shell's Bells man page"
+.TH "Shell's Bells - Simple Shell Project" 1 "14 April 2019" "1.0" 
 
 .SH NAME
 hsh - Shell's Bells - Simple Shell
