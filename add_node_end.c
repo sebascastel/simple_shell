@@ -1,10 +1,10 @@
 #include "holberton.h"
 /**
  * add_node_end - adds a new node to end of list of integers
- * @head: pointer to pointer of head of node
- * @a: key value
- * @b: value
- * Return: list of integers with new node added
+ * @head: pointer to pointer of head of no
+ * @a: a
+ * @b: 
+ * Return: new node added to the end
  */
 listint_t *add_node_end(listint_t **head, char *a, char *b)
 {
