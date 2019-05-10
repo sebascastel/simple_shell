@@ -1,12 +1,12 @@
 #include "holberton.h"
 /**
- * create_arg_list - takes the input buffer and creates argument list
- * @buff_tk: pointer to where the argument list will be stored
- * @buff: buffer to get argument list from
- * @delim: delimiter to use to delimit buffer
- * Return: pointer to pointer of argument list
+ * create_arg - takes the input buffer and creates argument list
+
+ * @buff buffer to get argument list from
+
+ * Return: ointer to pointer of argument list
  */
-char **create_arg_list(char **buff_tk, char *buff, const char *delim)
+char **create_arg(char *buff, const char *delim)
 {
 	int count = 0;
 	char *toprint, *buffdup;
