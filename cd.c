@@ -17,7 +17,7 @@ int helper_builtin_cd(char **buff_tk, char *argv, char *str,
 	tmp_str[1] = buff_tk[1][1];
 	tmp_str[2] = '\0';
 	str = _strcat(": Illegal option ", tmp_str, "\n");
-	error_message(argv, input_count, str, buff_tk);
+	error_message(buff);
 	free(tmp_str);
 	free(str);
 	free(buff_tk);
