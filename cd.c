@@ -13,14 +13,14 @@ int helper_builtin_cd(char **buff_tk, char *argv, char *str,
 
 {
 	tmp_str = malloc(sizeof(char) * 3);
-	tmp_str[0] = buff_tk[1][0];
-	tmp_str[1] = buff_tk[1][1];
+	tmp_str[0] = buff[1][0];
+	tmp_str[1] = buff[1][1];
 	tmp_str[2] = '\0';
 	str = _strcat(": Illegal option ", tmp_str, "\n");
 	error_message(buff);
-	free(tmp_str);
-	free(str);
-	free(buff_tk);
+	
+
+	free(buff);
 	buff_tk = NULL;
 	*stat = 2;
 return (1);
