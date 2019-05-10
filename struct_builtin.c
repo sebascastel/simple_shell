@@ -1,16 +1,10 @@
 #include "holberton.h"
 /**
  * get_builtin - function to find builtin function
- * @argv: program name
- * @input_count: number of commands processed
- * @env: environment
- * @buff: buffer value
- * @stat: exit status
+ * @buff: program name
  * Return: integer
- *
  */
-int (*get_builtin(char **s))(char **buff_tk, listint_t
-	**env, char *buff, char *argv, size_t input_count, int *stat)
+int (*get_builtin(char **s))(char **buff)
 {
 	builtin_t builtins[] = {
 		{"exit", s_exit},
