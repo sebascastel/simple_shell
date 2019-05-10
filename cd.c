@@ -3,8 +3,8 @@
  * helper_builtin_cd - helper function for biuldtin cd
  * @buf: tokenzied
 
- * @tmp_str: pointer to temp string
- * @argv: program name
+
+ 
 
 
  * Return: always 1
