@@ -21,7 +21,7 @@ int (*get_builtin(char **s))(char **buff_tk, listint_t
 		{"bart", bart},
 		{"help", _help},
 		{"welcome", welcome},
-		{NULL, _notfound}
+		{NULL, NULL}
 	};
 	int i = 0;
 
