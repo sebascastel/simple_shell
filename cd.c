@@ -1,16 +1,16 @@
 #include "holberton.h"
 /**
  * helper_builtin_cd - helper function for biuldtin cd
- * @buff_tk: tokenzied buffer
- * @str: pointer to string
+ * @buf: tokenzied
+
  * @tmp_str: pointer to temp string
  * @argv: program name
- * @input_count: number of commands run so far
- * @stat: exit status
+
+
  * Return: always 1
  */
 int helper_builtin_cd(char **buff_tk, char *argv, char *str,
-	char *tmp_str, size_t input_count, int *stat)
+
 {
 	tmp_str = malloc(sizeof(char) * 3);
 	tmp_str[0] = buff_tk[1][0];
